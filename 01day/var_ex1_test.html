@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 변수에 다른수를 담으면 나중에 들어온 수가 저장된다 하나의 변수는 하나의 값만 저장이 가능하다.
+        var box;
+        box = 100;
+        box = 30;
+        document.write(box) // 30
+
+        // 문자형 데이터 큰따옴표, 작은따옴표로 감싸고있는 값
+        var s = "javascript";
+        var num = '100';
+        var tag="<h1>String</h1>" // 문자형에 html 태그를 포함하여 출력하면 태그로 인식한다
+        document.write(tag);
+
+        // 숫자형은 단어 그대로 숫자를 의미
+        var s2= 100;
+        // 문자형 데이터 숫자는 Number()를 이용하여 숫자형 데이터로 변환 가능
+        var t=Number("500");
+
+        // 논리형 참,거짓으로 분류됨
+        var s3=true;
+        var t2= 10>=100; // false
+        var k=Boolean("hello"); // true; 0, null, undefined, ""빈문자 를 제외한 모든 데이터에 대해 true 반환
+        document.write(t2);
+        document.write(k);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
