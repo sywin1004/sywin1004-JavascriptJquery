@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프 예제</title>
+    <script>
+        var num = 500; // 전역변수
+        function fncTest(){ // 전역함수
+            var num = 200; // 지역변수
+            function innerFnc(){ // 내부함수
+                document.write(num,"<br>");
+            }
+            innerFnc(); // 전역함수 내부에서 선언 
+        }
+        fncTest();
+        
+        document.write(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
