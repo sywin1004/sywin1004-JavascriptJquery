@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	// 배경색 바꾸기 버튼을 클릭할 때 마다 배경색이 바뀌게 만드는 예제
+	var color=["white", "yellow", "aqua", "purple"];
+	
+	var i=0;
+	function changeColor(){
+		i++;
+		if(i > 4){
+			i = 0;
+		}
+		var bodyTag = document.getElementById("theBody"); // DOM을 활용해  theBody란 아이디에 접근
+		bodyTag.style.backgroundColor = color[i];
+	}
+
+</script>
+</head>
+<body id="theBody"> 
+	반갑습니다
+  <button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+</html>
