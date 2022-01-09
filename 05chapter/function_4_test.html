@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	var rightId = "korea";
+	var rightPw = "1234";
+	// prompt를 사용해 아이디와 비밀번호를 입력받고 이것이 일치하면 alert를 사용해 로그인 성공과 실패를 구분짓는다
+	function login(id,pw){
+		if(id == rightId){
+			if(pw == rightPw){
+				alert(rightId + "님 로그인 성공");
+			} else{
+				alert("잘못된 비밀번호 입니다")
+			}
+		} else {
+			alert("존재하지 않는 아이디 입니다.");
+		}
+	}
+	var userId = prompt("아이디를 입력하세요", "");
+	var userPw = prompt("패스워드를 입력하세요", "");
+
+	login(userId,userPw);
+</script>
+</head>
+<body>
+</body>
+</html>

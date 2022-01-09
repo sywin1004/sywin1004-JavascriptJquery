@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<style>
+	*{margin: 0;padding: 0;}
+	#galleryZone {text-align: center;}
+	#galleryZone input[type="image"]{margin:0 8px;}
+</style>
+<script>
+	// 이미지를 활용해 갤러리를 만든다 이미지는 1부터시작해 8까지 있다
+	var num = 1;
+	function gallery(direct){
+		if(direct){
+			// 0이면 false 1이면 true
+			if(num == 9){
+				return;
+			}
+			num++;
+		} else {
+			if(num == 1){
+				return;
+				num--;
+			}
+		}
+
+		var imgTag = document.getElementById("photo"); // photo id를 가진 태그
+		imgTag.setAttribute("src","images/pic_" + num + ".jpg"); // src 속성을 (바꿀속성, 바꿀값)
+
+	}
+</script>
+</head>
+<body>
+	<div id="galleryZone">
+		<p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+		<p>
+			<button onclick="gallery(0)">이전</button>
+			<button onclick="gallery(1)">다음</button>
+		</p>
+	</div>
+</body>
+</html>
