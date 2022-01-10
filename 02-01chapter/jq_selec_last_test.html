@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="js/jquery.js"> 
+// 문서 선택자를 이용한 css 변경
+// 기본 선택자
+// 직접선택자, 근접 선택자
+
+// 탐색 선택자
+// 위치선택자, 속성 선택자
+
+// 객체 조작
+// 선택한 요소 삭제, 생성, 복제, 속성 변경
+</script>
+<script>
+	// 요소 로딩이 된 후에 실행하라
+	$(function(){
+		// $("요소선택").css("속성","값")
+		$(".wrap_1").css("border","1px solid orange");
+		// 직접 선택자
+		$(".wrap_1 p").eq(1).css("background-color","yellow"); // 하위요소는 한칸 띄운다 wrap_1 클래스의 자식 p 태그
+		// 근접 선택자 내가 지정한 요소와의 관계를 파악해 선택하는 것
+		$(".active").next("p").css("background-color", "aqua"); // 근접 선택자 .active 클래스의 .next("p") 다음에 오는 p 태그
+		// 위치선택자 태그들을 배열로 정리해 인덱스의 위치로 파악해 저장한다 eq(인덱스 번호) 를 붙인다
+
+		// 속성 선택자 속성을 사용해 선택하는 선택자
+		$("input[type=text]").css({"background-color":"orange"}); // 속성선택자는 [속성] 으로 검색한다 {}를 사용해 객체 방식으로 값 변환
+		// 객체 조작
+		$(".wrap_1 p").eq(1).removeClass("active"); // 클래스값 삭제 remove
+		$(".wrap_1").append("<p>텍스트2</p>"); // 태그 추가 append
+	});
+</script>
+</head>
+<body>
+	<div class="wrap_1">
+		<p>텍스트1</p>
+		<p class="active">내용2</p>
+		<p><a href="#">네이버</a></p>
+		<p>
+			<input type="text" value="Hello">
+		</p>
+	</div>
+	<div class="wrap_2"> 
+		<p>내용5</p>
+		<p>내용6</p>
+	</div>
+	<div class="wrap_3">
+		<div>
+						<p>내용7</p>
+						<p>내용8</p>
+		</div>
+	</div>
+</body>
+</html>
