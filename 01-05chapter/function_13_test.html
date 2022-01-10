@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	// TestScore 객체 생성자
+	// 1. 객체 생성자 함수를 만들어 두 학생(kimgun, ohgun) 의 객체를 생성하고
+	// 속성으로 이름, 국어 점수, 영어 점수를 등록
+	// getTestInfo(), getAvg() 함수도 등록
+	// 객체를 생성하면 prototype 으로 함수를 등록해보기
+	// getTestInfo() 함수 실행시 이름, 국어, 영어 정보를 출력
+	// getAvg() 함수 실행시 평균 점수를 출력
+	function TestScore(name, kor, eng){
+		this.userName = name;
+		this.korNum = kor;
+		this.engNum = eng;
+	}
+	TestScore.prototype.getTestInfo = function() {
+		document.write("이름: " + this.userName, "<br>");
+		document.write("국어: " + this.korNum, "<br>");
+		document.write("영어: " + this.engNum, "<br>");
+	}
+	TestScore.prototype.getAvg = function() {
+		return  (this.korNum + this.engNum) / 2;
+	}
+	var kimgun = new TestScore("김군",80,90);
+	var ohgun = new TestScore("오군",100,80);
+
+	kimgun.getTestInfo();
+	document.write("평균 점수:" + kimgun.getAvg(), "<br><br>");
+
+	ohgun.getTestInfo();
+	document.write("평균 점수:" + ohgun.getAvg(), "<br>");
+</script>
+</head>
+<body>
+</body>
+</html>
