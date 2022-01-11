@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>종속 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	// 종속 선택자
+	// 선택한 요소의 id 또는 class 값이 일치하는 요소를 선택할 때 사용
+	// 하위선택자와 종속 선택자는 작성하는방법이 비슷해 주의
+	// 종속 선택자 -> 요소명과 id 값 사이에 공백이 없음
+	// 하위 선택자 -> 요소명과 id 값 사이에 공백이 있음
+	$("h1.tit").css("background-color","#0ff").css("border","2px dashed #f00");
+});
+</script>
+</head>
+<body>
+	<h1 class="tit">제이쿼리</h1> <!-- h1의 tit만 css가 적용됨 -->
+	<h2>선택자</h2>
+	<h3 class="tit">직접 선택자</h3>
+</body>
+</html>
