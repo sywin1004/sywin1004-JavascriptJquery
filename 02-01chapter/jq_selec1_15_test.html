@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>가장가까운 상위 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	// $(".txt1").css("border","2px solid blue");
+	$(".txt1").closest("div").css({"border":"2px solid #f00"}); // p 태그 위에 div에만 적용됨
+});
+</script>
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<div>
+		<div>
+			<p class="txt1">내용</p>
+		</div>
+	</div>
+</body>
+</html>
