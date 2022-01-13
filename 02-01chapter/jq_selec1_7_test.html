@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>부모 요소 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	// 부모 요소 선택자 id가 list_1 의 부모 선택자에 css 입히기
+	$("#list_1").parent().css("border","2px dashed #f00"); // list_1의 li 태그의 부모 ul태그에 css가 입혀진다
+});
+</script>
+</head>
+<body>
+	<h1>인접 관계 선택자</h1>
+	<ul id="wrap">
+		<li>리스트1
+			<ul> <!-- css가 입혀진 곳 li의 부모--> 
+				<li id="list_1">리스트1-1</li>
+				<li>리스트1-2</li>
+			</ul>
+		</li>
+		<li>리스트2</li>
+		<li>리스트3</li>
+	</ul>
+</body>
+</html>
